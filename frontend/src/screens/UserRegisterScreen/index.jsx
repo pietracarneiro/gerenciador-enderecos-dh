@@ -1,11 +1,18 @@
 import './userRegisterScreen.css';
 import Header from '../../components/Header'
+import { useState } from 'react';
 
-function userRegisterScreen() {
+
+function UserRegisterScreen() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
     function handleSubmit(event) {
         event.preventDefault();
-        console.log(event);
-        alert('Deu certo!');
+        console.log(`Nome: ${name} | Email: ${email}`);
+        setName();
+        setEmail();
       }
     
       return (
@@ -15,10 +22,10 @@ function userRegisterScreen() {
         <main>
           <form onSubmit={handleSubmit}>
             <label>Nome</label>
-            <input type="text" />
+            <input type="text" value={name} onChange={event => setName(event.target.value)}/>
     
             <label>Email</label>
-            <input type="email" />
+            <input type="email" value={email} onChange={event => setEmail(event.target.value)}/>
     
             <button type="submit">Cadastrar</button>
           </form>
@@ -27,4 +34,4 @@ function userRegisterScreen() {
       );
 }
 
-export default userRegisterScreen;
+export default UserRegisterScreen;

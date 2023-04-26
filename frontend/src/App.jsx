@@ -1,10 +1,10 @@
 import './App.css';
-//import UserRegisterScreen from './screens/UserRegisterScreen'
+import UserRegisterScreen from './screens/UserRegisterScreen'
 import UsersScreen from './screens/UsersScreen';
 
 function App() {
   return(
-    //<UserRegisterScreen />
+    // <UserRegisterScreen />
     <UsersScreen />
   );
   
